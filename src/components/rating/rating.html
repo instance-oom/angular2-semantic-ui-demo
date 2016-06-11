@@ -1,0 +1,45 @@
+<lsu-rating [(ngModel)]="rating" [maxRating]="getMaxRating()" [type]="type" [size]="size"></lsu-rating>
+
+<div class="ui header">Value</div>
+<hr> {{ rating }}
+
+<div class="ui header">Max Rating</div>
+<hr>
+<lsu-dropdown [(ngModel)]="maxRating" [data]="sizes"></lsu-dropdown>
+
+<div class="ui header">Type</div>
+<hr>
+<div class="ui buttons">
+  <button class="ui icon button" [class.active]="type == 'star'" (click)="setType('star')">
+    Star
+  </button>
+  <button class="ui icon button" [class.active]="type == 'heart'" (click)="setType('heart')">
+    Heart
+  </button>
+</div>
+
+<div class="ui header">Size</div>
+<hr>
+<div class="ui buttons">
+  <button class="ui icon button" [class.active]="size == 'mini'" (click)="setSize('mini')">
+    Mini
+  </button>
+  <button class="ui icon button" [class.active]="size == 'tiny'" (click)="setSize('tiny')">
+    Tiny
+  </button>
+  <button class="ui icon button" [class.active]="size == 'small'" (click)="setSize('small')">
+    Small
+  </button>
+  <button class="ui icon button" [class.active]="size == 'default'" (click)="setSize('default')">
+    Default
+  </button>
+  <button class="ui icon button" [class.active]="size == 'large'" (click)="setSize('large')">
+    Large
+  </button>
+  <button class="ui icon button" [class.active]="size == 'huge'" (click)="setSize('huge')">
+    Huge
+  </button>
+  <button class="ui icon button" [class.active]="size == 'massive'" (click)="setSize('massive')">
+    Massive
+  </button>
+</div>

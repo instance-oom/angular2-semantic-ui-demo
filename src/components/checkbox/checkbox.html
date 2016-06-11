@@ -1,0 +1,17 @@
+<div>
+  <lsu-checkbox [(ngModel)]="isChecked" [disabled]="true" [label]="'Check Box(Disabled)'" [type]="'checkbox'"></lsu-checkbox>
+</div>
+<div>
+  <lsu-checkbox [(ngModel)]="isChecked1" [disabled]="false" [label]="'Check Box(type:checkbox)'" [type]="'checkbox'"></lsu-checkbox>
+</div>
+<div>
+  <lsu-checkbox [(ngModel)]="isChecked2" [disabled]="false" [label]="'Check Box(type:slider)'" [type]="'slider'"></lsu-checkbox>
+</div>
+<div>
+  <lsu-checkbox [(ngModel)]="isChecked3" [disabled]="false" [label]="'Check Box(type:toggle)'" [type]="'toggle'"></lsu-checkbox>
+</div>
+<style>
+  div {
+    margin: 10px;
+  }
+</style>

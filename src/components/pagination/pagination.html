@@ -1,0 +1,27 @@
+<div>
+  <table class="ui celled table">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>OrderNo</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.ID }}</td>
+        <td>{{ item.Name }}</td>
+        <td>{{ item.Age }}</td>
+        <td>{{ item.OrderNo }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <lsu-loader [active]="activeLoader" [loaderText]="'Loading...'"></lsu-loader>
+</div>
+<div style="padding:5px 0;">
+  <lsu-pagination [disabled]="pagerDisabled" [totalCount]="totalCount" [pageSize]="pageSize" [currentPage]="currentPage" [maxSize]="maxSize"
+    [options]="pageOptions" (onSelectPage)="onSelectPage($event)"></lsu-pagination>
+</div>
+<hr>
+<lsu-checkbox [(ngModel)]="pageOptions.hidenLabel" [label]="'Hidden Pagination Label'" [type]="'slider'"></lsu-checkbox>
+<lsu-checkbox [(ngModel)]="pageOptions.boundaryLinks" [label]="'Show boundaryLinks'" [type]="'slider'"></lsu-checkbox>
+<lsu-checkbox [(ngModel)]="pageOptions.directionLinks" [label]="'Show DirectionLinks'" [type]="'slider'"></lsu-checkbox>

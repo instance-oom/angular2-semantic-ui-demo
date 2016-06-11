@@ -1,0 +1,87 @@
+<div class="pusher">
+  <div class="full height">
+    <div class="toc" style="min-height: 100%;">
+      <div class="ui vertical inverted sticky menu" style="left: 0px; top: 0px; width: 250px !important; height: 100%; position: fixed; overflow-y: auto;">
+        <div class="item">
+          <a class="ui logo icon image" [routerLink]="['Home']">
+            <img src="http://semantic-ui.com/images/logo.png" width="35px" style="margin-right: 1em;">
+          </a>
+          <a [routerLink]="['Home']">Get Start</a>
+        </div>
+        <a class="item" [routerLink]="['Accordion']">
+          Accordion
+        </a>
+        <a class="item" [routerLink]="['CheckBox']">
+          CheckBox
+        </a>
+        <a class="item" [routerLink]="['Dimmer']">
+          Dimmer
+        </a>
+        <a class="item" [routerLink]="['Dropdown']">
+          Dropdown
+        </a>
+        <a class="item" [routerLink]="['Loader']">
+          Loader
+        </a>
+        <a class="item" [routerLink]="['Modal']">
+          Modal
+        </a>
+        <a class="item" [routerLink]="['Pagination']">
+          Pagination
+        </a>
+        <a class="item" [routerLink]="['Popup']">
+          Popup
+        </a>
+        <a class="item" [routerLink]="['Progress']">
+          Progress
+        </a>
+        <a class="item" [routerLink]="['Rating']">
+          Rating
+        </a>
+        <a class="item" [routerLink]="['Tab']">
+          Tab
+        </a>
+      </div>
+    </div>
+    <div class="article">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<style>
+  .pusher {
+    height: 100%;
+  }
+  
+  .pusher > .full.height {
+    height: 100%;
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .full.height > .toc {
+    position: relative;
+    z-index: 1;
+    background-color: #1b1c1d;
+    width: 250px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
+  .article {
+    padding: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0px;
+  }
+</style>

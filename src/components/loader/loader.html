@@ -1,0 +1,18 @@
+<div style="margin: 10px 0; width:100%; height: 400px">
+  <lsu-loader [active]="activeLoader" [loaderText]="loaderText" [loaderSize]="loaderSize"></lsu-loader>
+</div>
+<div class="ui button" (click)="toggle()">{{ activeLoader ? 'Hidden':'Show' }} Loader</div>
+<div class="ui buttons">
+  <button class="ui icon button" (click)="setSize('mini')">
+    Mini
+  </button>
+  <button class="ui icon button" (click)="setSize('small')">
+    Small
+  </button>
+  <button class="ui icon button" (click)="setSize('medium')">
+    Medium
+  </button>
+  <button class="ui icon button" (click)="setSize('large')">
+    Large
+  </button>
+</div>

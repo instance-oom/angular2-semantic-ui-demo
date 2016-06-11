@@ -1,0 +1,5 @@
+<lsu-tabset>
+  <lsu-tab [headerText]="item.title" [active]="item.active" *ngFor="let item of datas">
+    <p style="padding: 50px 0;">{{ item.content }}</p>
+  </lsu-tab>
+</lsu-tabset>

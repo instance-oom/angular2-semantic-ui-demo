@@ -1,0 +1,21 @@
+<div class="ui header">
+  Array&lt;string&gt;
+</div>
+<lsu-dropdown [(ngModel)]="selectedColor" [data]="colors" [placeHolder]="'select color'"></lsu-dropdown>
+<hr>
+<strong>Selected Color: </strong> {{ selectedColor | json }}
+
+
+<div class="ui header">
+  Array&lt;object&gt;
+</div>
+<lsu-dropdown [(ngModel)]="selectedPerson" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select person'"></lsu-dropdown>
+<hr>
+<strong>Selected Person: </strong> {{ selectedPerson | json }}
+
+<div class="ui header">
+  Multiple Select
+</div>
+<lsu-dropdown [(ngModel)]="selectedPersons" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select persons'" [multiple]="true"></lsu-dropdown>
+<hr>
+<strong>Selected Persons: </strong> {{ selectedPersons | json }}

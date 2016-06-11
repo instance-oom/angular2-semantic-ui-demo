@@ -1,0 +1,32 @@
+<lsu-progress [label]="label" [percent]="percent" [text]="text" [color]="'teal'" [size]="size"></lsu-progress>
+<div class="ui header">Label</div>
+<hr>
+<div class="ui input">
+  <input type="text" [(ngModel)]="label" placeholder="Progress label">
+</div>
+
+<div class="ui header">Text</div>
+<hr>
+<div class="ui input">
+  <input type="text" [(ngModel)]="text" placeholder="Progress text">
+</div>
+
+<div class="ui header">Size</div>
+<hr>
+<div class="ui buttons">
+  <button class="ui icon button" [class.active]="size == 'tiny'" (click)="setSize('tiny')">
+    Tiny
+  </button>
+  <button class="ui icon button" [class.active]="size == 'small'" (click)="setSize('small')">
+    Small
+  </button>
+  <button class="ui icon button" [class.active]="size == 'standard'" (click)="setSize('standard')">
+    Standard
+  </button>
+  <button class="ui icon button" [class.active]="size == 'large'" (click)="setSize('large')">
+    Large
+  </button>
+  <button class="ui icon button" [class.active]="size == 'big'" (click)="setSize('big')">
+    Big
+  </button>
+</div>
