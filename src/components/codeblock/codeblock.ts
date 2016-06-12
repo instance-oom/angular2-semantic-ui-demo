@@ -19,6 +19,7 @@ export class CodeBlockDirective {
     this.ele.textContent = this.ele.textContent.trimLeft();
     this.ele.textContent = this.ele.textContent.trimRight();
     this.ele.classList.add(`language-${this.language}`);
+    this.ele.classList.add('line-numbers');
     Prism.highlightElement(this.ele);
   }
 }

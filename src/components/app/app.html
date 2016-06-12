@@ -2,12 +2,12 @@
   <div class="full height">
     <div class="toc" style="min-height: 100%;">
       <div class="ui vertical inverted sticky menu" style="left: 0px; top: 0px; width: 250px !important; height: 100%; position: fixed; overflow-y: auto;">
-        <div class="item">
-          <a class="ui logo icon image" [routerLink]="['Home']">
+        <a class="item" [routerLink]="['Home']">
+          <div class="ui logo icon image">
             <img src="http://semantic-ui.com/images/logo.png" width="35px" style="margin-right: 1em;">
-          </a>
-          <a [routerLink]="['Home']">Get Start</a>
-        </div>
+          </div>
+          Get Start
+        </a>
         <a class="item" [routerLink]="['Accordion']">
           Accordion
         </a>
@@ -77,7 +77,7 @@
   }
   
   .article {
-    padding: 10px;
+    padding: 2em 1.5em;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;

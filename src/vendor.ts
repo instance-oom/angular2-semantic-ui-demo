@@ -10,8 +10,11 @@ import 'rxjs';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // Import css
+import '../public/css/semantic.min.css';
 import '../public/css/prism.css';
 import '../public/css/styles.css';
 
 // Import js
+import '../public/js/jquery.min.js';
+import '../public/js/semantic.min.js';
 import '../public/js/prism.js';

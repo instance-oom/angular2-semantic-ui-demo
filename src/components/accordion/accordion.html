@@ -1,25 +1,29 @@
-<h3>View</h3>
+<h2 class="ui dividing header">
+  Example
+</h2>
 <lsu-accordion [option]="accordOption">
   <lsu-accordionPanel [title]="panel.title" [active]="panel.active" *ngFor="let panel of panels;">
     <p>{{ panel.content }}</p>
   </lsu-accordionPanel>
 </lsu-accordion>
 
-<h3>Code</h3>
-<lsu-tabset>
-  <lsu-tab [headerText]="'accordion.html'">
-<pre lsu-codeblock [language]="'html'">
+<h2 class="ui dividing header">
+  Codes
+</h2>
+<lsu-tabset [type]="'secondary'">
+  <lsu-tab [headerText]="'accordion.html'" [useSegment]="false">
+    <pre><code lsu-codeblock [language]="'html'">
 <textarea>
 <lsu-accordion [option]="accordOption">
   <lsu-accordionPanel [title]="panel.title" [active]="panel.active" *ngFor="let panel of panels;">
     <p>(<(content)>)</p>
   </lsu-accordionPanel>
 </lsu-accordion>
-</textarea>
+</textarea></code>
 </pre>
   </lsu-tab>
-  <lsu-tab [headerText]="'accordion.ts'">
-<pre lsu-codeblock [language]="'typescript'">
+  <lsu-tab [headerText]="'accordion.ts'" [useSegment]="false">
+    <pre><code lsu-codeblock [language]="'typescript'">
 <textarea>
 import { Component } from '@angular/core';
 import { CodeBlockDirective } from '../codeblock/codeblock';
@@ -61,7 +65,7 @@ export class AccordionExample {
       }]
   }
 }
-</textarea>
+</textarea></code>
 </pre>
   </lsu-tab>
 </lsu-tabset>
