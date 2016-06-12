@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { DIMMER_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { DIMMER_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'dimmer-example',
-  directives: [DIMMER_DIRECTIVES],
+  directives: [DIMMER_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./dimmer.html')
 })
 

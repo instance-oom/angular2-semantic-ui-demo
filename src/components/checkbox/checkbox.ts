@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { CHECKBOX_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui';
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { CHECKBOX_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui';
 
 @Component({
   selector: 'checkbox-example',
-  directives: [CHECKBOX_DIRECTIVES],
+  directives: [CHECKBOX_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./checkbox.html')
 })
 

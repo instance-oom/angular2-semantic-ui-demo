@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { DROPDOWN_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { DROPDOWN_DIRECTIVES, TAB_DIRECTIVES} from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'dropdown-example',
-  directives: [DROPDOWN_DIRECTIVES],
+  directives: [DROPDOWN_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./dropdown.html')
 })
 
 export class DropdownExample {
   private selectedColor: string;
   private selectedPerson: any;
-  private selectedPersons: Array<any>;
+  private selectedPersons: Array<any> = [];
   private colors: Array<string> = [];
   private persons: Array<any> = [];
   private fieldForShow: string;
@@ -36,6 +37,6 @@ export class DropdownExample {
   }
 
   ngOnInit() {
-
+    this.selectedPersons.push(this.persons[1]);
   }
 }

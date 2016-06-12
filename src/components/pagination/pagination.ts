@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { PAGINATION_DIRECTIVES, LOADER_DIRECTIVES, CHECKBOX_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { PAGINATION_DIRECTIVES, LOADER_DIRECTIVES, CHECKBOX_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'pagination-example',
-  directives: [PAGINATION_DIRECTIVES, LOADER_DIRECTIVES, CHECKBOX_DIRECTIVES],
+  directives: [PAGINATION_DIRECTIVES, LOADER_DIRECTIVES, CHECKBOX_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./pagination.html')
 })
 

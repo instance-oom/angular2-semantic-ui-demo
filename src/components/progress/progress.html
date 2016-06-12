@@ -1,18 +1,20 @@
+<h2 class="ui dividing header">
+  Example
+</h2>
 <lsu-progress [label]="label" [percent]="percent" [text]="text" [color]="'teal'" [size]="size"></lsu-progress>
-<div class="ui header">Label</div>
-<hr>
+
+<h2 class="ui dividing header">
+  Operate
+</h2>
+Label:
 <div class="ui input">
   <input type="text" [(ngModel)]="label" placeholder="Progress label">
-</div>
-
-<div class="ui header">Text</div>
-<hr>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+Text:
 <div class="ui input">
   <input type="text" [(ngModel)]="text" placeholder="Progress text">
-</div>
-
-<div class="ui header">Size</div>
-<hr>
+</div>&nbsp;&nbsp;
+Size:
 <div class="ui buttons">
   <button class="ui icon button" [class.active]="size == 'tiny'" (click)="setSize('tiny')">
     Tiny
@@ -30,3 +32,76 @@
     Big
   </button>
 </div>
+
+<h2 class="ui dividing header">
+  Options
+</h2>
+<ul>
+    <li><strong>percent:</strong>&nbsp;&nbsp;<strong style="color:tomato">Required</strong>. 0-100</li>
+    <li><strong>text:</strong>&nbsp;&nbsp;Optional. Just like 50% 、70% 、90%...</li>
+    <li><strong>label:</strong>&nbsp;&nbsp;Optional. Shown below porgress</li>
+    <li><strong>color:</strong>&nbsp;&nbsp;Optional. see <a href="http://semantic-ui.com/modules/progress.html#color" target="_blank">Semantic-Ui Progress Color</a></li>
+    <li><strong>size:</strong>&nbsp;&nbsp;Optional. [ tiny | small | standard | large | big ], Default is <strong style="color: tomato">standard</strong> </li>
+</ul>
+
+<h2 class="ui dividing header">
+  Codes
+</h2>
+<lsu-tabset [type]="'secondary'">
+  <lsu-tab [headerText]="'progress_example.html'" [useSegment]="false">
+    <pre><code lsu-codeblock [language]="'html'">
+<textarea>
+<lsu-progress [label]="label" [percent]="percent" [text]="text" [color]="'teal'" [size]="size"></lsu-progress>
+</textarea></code>
+</pre>
+  </lsu-tab>
+  <lsu-tab [headerText]="'progress_example.ts'" [useSegment]="false">
+<pre><code lsu-codeblock [language]="'typescript'">
+  <textarea>
+import { Component } from '@angular/core';
+import { PROGRESS_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+
+@Component({
+  selector: 'progress-example',
+  directives: [PROGRESS_DIRECTIVES],
+  template: require('./progress.html')
+})
+
+export class ProgressExample {
+
+  private label: string = "Uploading...";
+  private text: string;
+  private color: string = "teal";
+  private size: string = "standard";
+  private percent: number = 0;
+
+  private timer: any;
+  constructor() {
+
+  }
+
+  ngOnInit() {
+    this.animation();
+  }
+
+  animation(): void {
+    var self = this;
+    if (self.timer) {
+      clearInterval(self.timer);
+    }
+    self.timer = setInterval(function () {
+      self.percent += Math.floor(Math.random() * 10 + 10);
+      if (self.percent > 100) {
+        self.percent = 0;
+      }
+    }, 500)
+  }
+
+  setSize(size: string): void {
+    this.size = size;
+  }
+}
+  </textarea>
+</code></pre>
+  </lsu-tab>
+</lsu-tabset>

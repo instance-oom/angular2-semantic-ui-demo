@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { MODAL_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { MODAL_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'modal-example',
-  directives: [MODAL_DIRECTIVES],
+  directives: [MODAL_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./modal.html')
 })
 
 export class ModalExample {
   private modalOptions: any;
-  private showModal: boolean = true;
+  private showModal: boolean;
   constructor() {
-    
+
   }
 
   ngOnInit() {

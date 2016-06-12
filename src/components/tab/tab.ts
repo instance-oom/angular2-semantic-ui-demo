@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { CodeBlockDirective } from '../codeblock/codeblock';
 import { TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'tab-example',
-  directives: [TAB_DIRECTIVES],
+  directives: [TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./tab.html')
 })
 
 export class TabExample {
   private datas: Array<any> = [];
+  private type: string = 'tabular';
   constructor() {
   }
 
@@ -28,5 +30,9 @@ export class TabExample {
         active: false
       }
     ]
+  }
+
+  private setType(type: string) {
+    this.type = type;
   }
 }

@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { CodeBlockDirective } from '../codeblock/codeblock';
-import { ACCORDION_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui';
+import { ACCORDION_DIRECTIVES, TAB_DIRECTIVES, CHECKBOX_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui';
 
 @Component({
   selector: 'accordion-demo',
-  directives: [ACCORDION_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
-  template: require('./accordion.html')  
+  directives: [ACCORDION_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective, CHECKBOX_DIRECTIVES],
+  template: require('./accordion.html')
 })
 
 export class AccordionExample {
 
   private panels: Array<any>;
   private accordOption: any;
+  private allowMultiple: boolean = false;
   constructor() {
     this.accordOption = {
       "styled": true,
       "fluid": true,
-      "inverted": false,
-      "allowMultiple": false
+      "inverted": false
     }
 
     this.panels = [

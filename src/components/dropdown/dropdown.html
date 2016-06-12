@@ -1,21 +1,103 @@
-<div class="ui header">
-  Array&lt;string&gt;
-</div>
-<lsu-dropdown [(ngModel)]="selectedColor" [data]="colors" [placeHolder]="'select color'"></lsu-dropdown>
+<h2 class="ui dividing header">
+  Examples
+</h2>
+
+<label class="ui large teal label">
+  Single Select
+</label>
 <hr>
-<strong>Selected Color: </strong> {{ selectedColor | json }}
-
-
-<div class="ui header">
-  Array&lt;object&gt;
+<div class="ui two column grid">
+  <div class="column">
+    <lsu-dropdown [(ngModel)]="selectedColor" [data]="colors" [placeHolder]="'select color'"></lsu-dropdown>
+    <div class="ui message" *ngIf="selectedColor">
+      <strong>Selected Color: </strong> {{ selectedColor | json }}
+    </div>
+  </div>
+  <div class="column">
+    <lsu-dropdown [(ngModel)]="selectedPerson" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select person'"></lsu-dropdown>
+    <div class="ui message" *ngIf="selectedPerson">
+      <strong>Selected Person: </strong> {{ selectedPerson | json }}
+    </div>
+  </div>
 </div>
-<lsu-dropdown [(ngModel)]="selectedPerson" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select person'"></lsu-dropdown>
-<hr>
-<strong>Selected Person: </strong> {{ selectedPerson | json }}
 
-<div class="ui header">
+<label class="ui large teal label" style="margin-top: 20px;">
   Multiple Select
-</div>
-<lsu-dropdown [(ngModel)]="selectedPersons" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select persons'" [multiple]="true"></lsu-dropdown>
+</label>
 <hr>
-<strong>Selected Persons: </strong> {{ selectedPersons | json }}
+<lsu-dropdown [(ngModel)]="selectedPersons" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select persons'" [multiple]="true"></lsu-dropdown>
+<div class="ui message" *ngIf="selectedPersons && selectedPersons.length > 0">
+  <strong>Selected Persons: </strong> {{ selectedPersons | json }}
+</div>
+
+<h2 class="ui dividing header">
+  Options
+</h2>
+<ul>
+  <li><strong>data:</strong>&nbsp;&nbsp;<strong style="color: tomato">Required</strong>. Type of Array, when the array is stored in the Object, you need to specify the <strong style="color: tomato">textField</strong></li>
+  <li><strong>textField:</strong>&nbsp;&nbsp;Optional. Specify which properties are used to display on the page</li>
+  <li><strong>placeHolder:</strong>&nbsp;&nbsp;Optional.</li>
+  <li><strong>multiple:</strong>&nbsp;&nbsp;Optional. Type of boolean. Default is <strong style="color: tomato">false</strong></li>
+</ul>
+
+<h2 class="ui dividing header">
+  Codes
+</h2>
+<lsu-tabset [type]="'secondary'">
+  <lsu-tab [headerText]="'dropdown_example.html'" [useSegment]="false">
+    <pre><code lsu-codeblock [language]="'html'">
+<textarea>
+<lsu-dropdown [(ngModel)]="selectedColor" [data]="colors" [placeHolder]="'select color'"></lsu-dropdown>
+<lsu-dropdown [(ngModel)]="selectedPerson" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select person'"></lsu-dropdown>
+<lsu-dropdown [(ngModel)]="selectedPersons" [data]="persons" [textField]="fieldForShow" [placeHolder]="'select persons'" [multiple]="true"></lsu-dropdown>
+</textarea></code>
+</pre>
+  </lsu-tab>
+  <lsu-tab [headerText]="'dropdown_example.ts'" [useSegment]="false">
+<pre><code lsu-codeblock [language]="'typescript'">
+  <textarea>
+import { Component } from '@angular/core';
+import { DROPDOWN_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+
+@Component({
+  selector: 'dropdown-example',
+  directives: [DROPDOWN_DIRECTIVES],
+  template: require('./dropdown.html')
+})
+
+export class DropdownExample {
+  private selectedColor: string;
+  private selectedPerson: any;
+  private selectedPersons: Array<any> = [];
+  private colors: Array<string> = [];
+  private persons: Array<any> = [];
+  private fieldForShow: string;
+
+  constructor() {
+    this.colors = ["Green", "Red", "Blue", "Yellow", "Black"];
+    this.persons = [
+      {
+        "id": 1,
+        "name": "Tom",
+        "age": 18
+      }, {
+        "id": 2,
+        "name": "Jerry",
+        "age": 25
+      }, {
+        "id": 3,
+        "name": "Jim",
+        "age": 15
+      }
+    ]
+    this.fieldForShow = "name";
+  }
+
+  ngOnInit() {
+    this.selectedPersons.push(this.persons[1]);
+  }
+}
+  </textarea>
+</code></pre>
+  </lsu-tab>
+</lsu-tabset>

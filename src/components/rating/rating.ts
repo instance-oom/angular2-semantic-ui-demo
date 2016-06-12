@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RATING_DIRECTIVES, DROPDOWN_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { RATING_DIRECTIVES, DROPDOWN_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'rating-example',
-  directives: [RATING_DIRECTIVES, DROPDOWN_DIRECTIVES],
+  directives: [RATING_DIRECTIVES, DROPDOWN_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./rating.html')
 })
 

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { PROGRESS_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
+import { CodeBlockDirective } from '../codeblock/codeblock';
+import { PROGRESS_DIRECTIVES, TAB_DIRECTIVES } from 'angular2-semantic-ui/angular2-semantic-ui'
 
 @Component({
   selector: 'progress-example',
-  directives: [PROGRESS_DIRECTIVES],
+  directives: [PROGRESS_DIRECTIVES, TAB_DIRECTIVES, CodeBlockDirective],
   template: require('./progress.html')
 })
 
