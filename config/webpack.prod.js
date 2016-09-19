@@ -20,7 +20,7 @@ module.exports = webpackMerge(commonConfig, {
     minimize: false // workaround for ng2
   },
 
-  plugins: [
+  plugins: [    
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),

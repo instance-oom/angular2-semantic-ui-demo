@@ -1,0 +1,67 @@
+<h1 class="ui header">
+  Popup Demo
+  <div class="sub header">
+    A popup displays additional information on top of a page
+  </div>
+</h1>
+
+<h3 class="ui dividing header">
+  Design
+</h3>
+<button type="button" class="ui button" lsu-popup [trigger]="'click'" [content]="'Popup On Click.'">
+    Click to show popup
+</button>
+<button type="button" class="ui teal button" lsu-popup [trigger]="'hover'" [content]="'Popup On Hover.'">
+    Hover to show popup
+</button>
+<div class="ui input">
+  <input type="text" placeholder="Search..." lsu-popup [trigger]="'focus'" [content]="'Popup On Focus'">
+</div>
+
+<h3 class="ui dividing header">
+  Options
+</h3>
+<ul>
+  <li><strong>trigger:</strong>&nbsp;&nbsp;Optional.The way to trigger Popup [ hover | click | docus], Default is <strong style="color: tomato">hover</strong></li>
+  <li><strong>content:</strong>&nbsp;&nbsp;Optional.Popup text</li>
+</ul>
+
+<h3 class="ui dividing header">
+  Codes
+</h3>
+<lsu-tabset [type]="'secondary'">
+  <lsu-tab [headerText]="'popup_example.html'">
+    <pre><code lsu-codeblock [language]="'html'">
+<textarea>
+<button type="button" class="ui button" lsu-popup [trigger]="'click'" [content]="'Popup On Click.'">
+    Click to show popup
+</button>
+
+<button type="button" class="ui teal button" lsu-popup [trigger]="'hover'" [content]="'Popup On Hover.'">
+    Hover to show popup
+</button>
+
+<div class="ui input">
+  <input type="text" placeholder="Search..." lsu-popup [trigger]="'focus'" [content]="'Popup On Focus'">
+</div>
+</textarea></code>
+</pre>
+  </lsu-tab>
+  <lsu-tab [headerText]="'popup_example.ts'">
+<pre><code lsu-codeblock [language]="'typescript'">
+  <textarea>
+import << Component >> from '@angular/core';
+
+@Component(<<
+  selector: 'popup-example',
+  templateUrl: './popup_example.html'
+>>)
+
+export class PopupExample <<
+  constructor() <<
+  >>
+>>
+  </textarea>
+</code></pre>
+  </lsu-tab>
+</lsu-tabset>

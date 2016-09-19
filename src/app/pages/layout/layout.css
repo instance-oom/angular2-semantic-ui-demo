@@ -1,0 +1,31 @@
+.ui.left.sidebar, .ui.right.sidebar {
+  width: 250px !important;
+  background-color: rgba(27, 28, 29, 0.9) !important;
+}
+
+a.item.menu {
+  padding-left: 22px;
+  cursor: pointer;
+}
+
+a.item.menu:hover, a.item.menu.active {
+  background: #2c3b41 !important;
+  font-weight: bold;
+  border-left: 3px solid #ffffff;
+}
+
+.header {
+  overflow: hidden;
+  color: white;
+  background: #1a2226;
+  text-overflow: clip;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+
+.content {
+  padding: 15px;
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
+}

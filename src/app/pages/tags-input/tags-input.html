@@ -1,0 +1,67 @@
+<h1 class="ui header">
+  Tags-Input Demo
+  <div class="sub header">
+    A tags-input component
+  </div>
+</h1>
+
+<h3 class="ui dividing header">
+  Design
+</h3>
+<lsu-tagsInput [(ngModel)]="tags" [placeholder]="'Add Tag'" [invalidMsg]="'Tag must be greater than 2 characters.'" [validators]="validators"></lsu-tagsInput>
+<div class="ui segment">
+  <p>Tags: {{ tags }}</p>
+</div>
+
+<h3 class="ui dividing header">
+  Options
+</h3>
+<ul style="padding-left: 20px;">
+  <li><b>placeholder</b>: Optional.</li>
+  <li><b>invalidMsg</b>: Optional. Active when has validators.</li>
+  <li><b>validators</b>: Optional. Array&lt;ValidatorFn&gt;.</li>
+</ul>
+
+
+<h3 class="ui dividing header">
+  Codes
+</h3>
+<lsu-tabset [type]="'secondary'">
+  <lsu-tab [headerText]="'tags_input_example.html'">
+    <pre><code lsu-codeblock [language]="'html'">
+<textarea>
+<lsu-tabset [type]="type">
+  <lsu-tab [headerText]="item.title" *ngFor="let item of datas">
+    <p style="padding: 20px 10px;">(<(item.content)>)</p>
+  </lsu-tab>
+</lsu-tabset>
+</textarea></code>
+</pre>
+  </lsu-tab>
+  <lsu-tab [headerText]="'tags_input_example.ts'">
+    <pre><code lsu-codeblock [language]="'typescript'">
+  <textarea>
+import << Component >> from '@angular/core';
+import << Validators >> from '@angular/forms';
+
+@Component(<<
+  selector: 'tags-input-example',
+  template: require('./tags-input.html')
+>>)
+export class TagsInputDemoPage <<
+
+  private tags: Array<string>;
+  private validators: Array<any>;
+
+  constructor() <<
+
+  >>
+
+  ngOnInit() <<
+    this.validators = [Validators.minLength(4)];
+  >>
+>>
+  </textarea>
+</code></pre>
+  </lsu-tab>
+</lsu-tabset>

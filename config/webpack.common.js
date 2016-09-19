@@ -4,6 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var helpers = require('./helpers');
 
+var node_dir = helpers.root('node_modules');
+
 module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
@@ -13,47 +15,47 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.ts'],
-    root: [],
-    alias: {
-      'jquery': path.resolve(helpers.root(), 'public/js/jquery.min.js')
-    }
+    root: []
   },
 
   module: {
     loaders: [
-      {
-        test: /\.ts$/,
-        loader: 'ts'
+      { 
+        test: /\.ts$/, 
+        loader: 'ts' 
+      },
+      { 
+        test: /\.html$/, 
+        loader: 'html' 
+      },
+      { 
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, 
+        loader: 'file?name=assets/[name].[ext]' 
+      },
+      { 
+        test: /\.css$/, 
+        exclude: helpers.root('src', 'app'), 
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap') 
+      },
+      { 
+        test: /\.css$/, 
+        include: helpers.root('src', 'app'), 
+        loader: 'raw' 
+      },
+      { 
+        test: require.resolve('jquery'), 
+        loader: 'expose?jQuery!expose?$' 
       },
       {
-        test: /\.html$/,
-        loader: 'html'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
-      },
-      {
-        test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-      },
-      {
-        test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw'
-      },
+        test: /oboe-browser.js$/,
+        loader: 'expose?oboe'
+      }
     ]
   },
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
-    }),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'

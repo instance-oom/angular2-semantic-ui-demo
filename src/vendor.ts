@@ -4,17 +4,17 @@ import '@angular/platform-browser-dynamic';
 import '@angular/core';
 import '@angular/common';
 import '@angular/http';
-import '@angular/router-deprecated';
+import '@angular/router';
+
 // RxJS
 import 'rxjs';
 
-// Other vendors for example jQuery, Lodash or Bootstrap
-// Import css
-import '../public/css/semantic.min.css';
-import '../public/css/prism.css';
-import '../public/css/styles.css';
+// Javascript
+import 'jquery';
+import './static/js/semantic.min.js';
+import './static/js/prism.js';
 
-// Import js
-import '../public/js/jquery.min.js';
-import '../public/js/semantic.min.js';
-import '../public/js/prism.js';
+// CSS
+import './static/css/semantic.min.css';
+import './static/css/prism.css';
+import './static/css/styles.css';
