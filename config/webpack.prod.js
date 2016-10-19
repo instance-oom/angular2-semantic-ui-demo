@@ -20,10 +20,17 @@ module.exports = webpackMerge(commonConfig, {
     minimize: false // workaround for ng2
   },
 
-  plugins: [    
+  plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: {
+        keep_fnames: true
+      },
+      compress: {
+        warnings: false
+      }
+    }),
     new ExtractTextPlugin('[name].css'),
     new webpack.DefinePlugin({
       'process.env': {
