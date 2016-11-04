@@ -21,6 +21,7 @@ module.exports = webpackMerge(commonConfig, {
     historyApiFallback: true,
     colors: true,
     stats: 'minimal',
-    contentBase: './src'
+    contentBase: './src',
+    open: true
   }
 });
