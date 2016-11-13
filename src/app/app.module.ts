@@ -1,8 +1,8 @@
 import { enableProdMode, NgModule } from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { SEMANTIC_UI_COMPONENTS } from 'angular2-semantic-ui';
+import { L_SEMANTIC_UI_MODULE } from 'angular2-semantic-ui';
 
 import { LSUDemo } from './app';
 import { PAGES } from './pages';
@@ -12,7 +12,6 @@ import { AppRouts } from './app.routes';
 @NgModule({
   declarations: [
     LSUDemo,
-    ...SEMANTIC_UI_COMPONENTS,
     ...COMPONENTS,
     ...PAGES,
   ],
@@ -20,6 +19,7 @@ import { AppRouts } from './app.routes';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    L_SEMANTIC_UI_MODULE,
     RouterModule.forRoot(AppRouts, { useHash: true })
   ],
   providers: [

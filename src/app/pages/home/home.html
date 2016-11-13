@@ -27,15 +27,18 @@ npm install angular2-semantic-ui --save
 
 <h3 class="ui dividing header">Usage</h3>
 <pre><code lsu-codeblock [language]="'typescript'">
-import << SEMANTIC_UI_COMPONENTS >> from 'angular2-semantic-ui';
+import << L_SEMANTIC_UI_MODULE >> from 'angular2-semantic-ui';
 
 @NgModule(<<
   declarations: [
-    APP,
-    ...SEMANTIC_UI_COMPONENTS
+    APP
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    L_SEMANTIC_UI_MODULE
   ],
   providers: [],
   bootstrap: [APP]
