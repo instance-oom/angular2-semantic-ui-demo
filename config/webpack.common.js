@@ -1,10 +1,8 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
+var resolveNgRoute = require('@angularclass/resolve-angular-routes');
 var helpers = require('./helpers');
-
-var node_dir = helpers.root('node_modules');
 
 module.exports = {
   entry: {
@@ -14,8 +12,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js'],
-    root: []
+    extensions: ['.ts', '.js']
   },
 
   module: {
@@ -26,37 +23,44 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[ext]'
+        loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
         test: /\.css$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader?sourceMap'
+        })
       },
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw'
+        loader: 'raw-loader'
       },
       {
         test: require.resolve('jquery'),
-        loader: 'expose?jQuery!expose?$'
-      },
-      {
-        test: /oboe-browser.js$/,
-        loader: 'expose?oboe'
+        loader: 'expose-loader?jQuery!expose-loader?$'
       }
     ]
   },
 
   plugins: [
+    new webpack.ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      helpers.root('src'),
+      resolveNgRoute(helpers.root('src'))
+    ),
+
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
+
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })

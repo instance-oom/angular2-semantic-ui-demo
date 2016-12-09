@@ -4,12 +4,11 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: '#eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
 
   output: {
     path: helpers.root('dist'),
-    publicPath: 'http://localhost:8080/',
-    filename: '[name]-[hash].js',
+    filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },
 
@@ -18,10 +17,12 @@ module.exports = webpackMerge(commonConfig, {
   ],
 
   devServer: {
-    historyApiFallback: true,
-    colors: true,
-    stats: 'minimal',
     contentBase: './src',
-    open: true
+    port: 8080,
+    inline: true,
+    historyApiFallback: {
+      index: '/'
+    },    
+    stats: 'minimal'
   }
 });
