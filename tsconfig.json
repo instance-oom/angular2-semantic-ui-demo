@@ -8,11 +8,13 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "es6",
+      "dom"
+    ]
   },
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/index.d.ts"
+    "node_modules"
   ]
 }
