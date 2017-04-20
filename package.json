@@ -23,7 +23,7 @@
     "@types/core-js": "^0.9.39",
     "@types/jasmine": "^2.5.46",
     "@types/node": "^6.0.68",
-    "angular2-semantic-ui": "^2.0.0",
+    "angular2-semantic-ui": "^2.0.1",
     "core-js": "^2.4.1",
     "jquery": "2.2.4",
     "reflect-metadata": "0.1.8",
