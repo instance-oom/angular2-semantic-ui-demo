@@ -19,9 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "./vendor/css/semantic.min.css",
+        "./vendor/css/prism.css",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "./vendor/js/jquery.min.js",
+        "./vendor/js/semantic.min.js",
+        "./vendor/js/prism.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
