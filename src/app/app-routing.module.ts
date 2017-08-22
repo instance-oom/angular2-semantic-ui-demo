@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import {
+  LsuDemoLayoutPage,
+  HomePage
+} from './pages';
+
 const routes: Routes = [
   {
-    path: '',
-    children: []
+    path: '', component: LsuDemoLayoutPage, children:
+    [
+      { path: '', component: HomePage }
+    ]
   }
 ];
 

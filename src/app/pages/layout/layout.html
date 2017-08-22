@@ -1,0 +1,30 @@
+<div class="ui visible inverted left vertical sidebar menu">
+  <a [routerLink]="['/']">
+    <div style="display: flex; padding: 5px 10px; align-items: center;">
+      <img width="50px" height="50px" src="http://semantic-ui.com/images/logo.png" style="border-radius: 50%;">
+      <div style="flex: 1; padding: 0 10px; color: white; font-size: 20px;">
+        Get Started
+      </div>
+    </div>
+  </a>
+  <div class="header">
+    COMPONENTS
+  </div>
+  <div class="ui inverted">
+    <a class="item menu" [routerLink]="['/accordion']" routerLinkActive="active">Accordion</a>
+    <a class="item menu" [routerLink]="['/checkbox']" routerLinkActive="active">CheckBox</a>
+    <a class="item menu" [routerLink]="['/dimmer']" routerLinkActive="active">Dimmer</a>
+    <a class="item menu" [routerLink]="['/dropdown']" routerLinkActive="active">Dropdown</a>
+    <a class="item menu" [routerLink]="['/loader']" routerLinkActive="active">Loader</a>
+    <a class="item menu" [routerLink]="['/modal']" routerLinkActive="active">Modal</a>
+    <a class="item menu" [routerLink]="['/pagination']" routerLinkActive="active">Pagination</a>
+    <a class="item menu" [routerLink]="['/popup']" routerLinkActive="active">Popup</a>
+    <a class="item menu" [routerLink]="['/progress']" routerLinkActive="active">Progress</a>
+    <a class="item menu" [routerLink]="['/rating']" routerLinkActive="active">Rating</a>
+    <a class="item menu" [routerLink]="['/tab']" routerLinkActive="active">Tab</a>
+    <a class="item menu" [routerLink]="['/tags-input']" routerLinkActive="active">Tags Input</a>
+  </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
