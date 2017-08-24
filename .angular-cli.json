@@ -25,6 +25,7 @@
       ],
       "scripts": [
         "./vendor/js/jquery.min.js",
+        "./vendor/js/jquery.slimscroll.min.js",
         "./vendor/js/semantic.min.js",
         "./vendor/js/prism.js"
       ],

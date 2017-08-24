@@ -1,6 +1,48 @@
 <h1 class="ui header">
   Get Started
-  <div class="sub header">
+  <div class="sub header m-t">
     A angular2 component set of semantic-ui, and no jQuery dependency
   </div>
 </h1>
+
+<div>
+  <a target="_blank" href="https://badge.fury.io/js/angular2-semantic-ui">
+    <img src="https://badge.fury.io/js/angular2-semantic-ui.svg" alt="">
+  </a>
+  <a target="_blank" href="https://badge.fury.io/js/angular2-semantic-ui">
+    <img src="https://img.shields.io/npm/dt/angular2-semantic-ui.svg" alt="">
+  </a>
+  <a target="_blank" href="https://github.com/lon-yang/angular2-semantic-ui">
+    <img src="https://img.shields.io/github/stars/lon-yang/angular2-semantic-ui.svg?style=social&label=Star&maxAge=2592000?style=plastic%20:target:%20https://github.com/lon-yang/angular2-semantic-ui" alt="">
+  </a>
+</div>
+
+<div class="m-t-md">
+  <h3 class="ui dividing header">Install</h3>
+  <pre lsu-codeblock [language]="'bash'">
+    npm install angular2-semantic-ui --save
+  </pre>
+</div>
+
+<div class="m-t-md">
+  <h3 class="ui dividing header">Usage</h3>
+  <pre lsu-codeblock [language]="'typescript'">
+import << L_SEMANTIC_UI_MODULE >> from 'angular2-semantic-ui';
+
+@NgModule(<<
+  declarations: [
+    APP
+  ],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    L_SEMANTIC_UI_MODULE
+  ],
+  providers: [],
+  bootstrap: [APP]
+>>)
+export class AppModule << >>
+  </pre>
+</div>
