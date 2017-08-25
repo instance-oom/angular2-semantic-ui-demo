@@ -4,6 +4,42 @@
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
+ul.change-log {
+  list-style: none;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  li {
+    position: relative;
+    &::before {
+      position: absolute;
+      left: -5px;
+      top: 1px;
+      content: '-';
+      font-weight: 700;
+    }
+    padding: 3px 5px;
+    font-size: 13px;
+    b {
+      background-color: #eeeeee;
+      color: orange;
+      border-radius: 5px;
+      padding: 1px 5px;
+    }
+    .date {
+      color: tomato;
+      &::before {
+        content: '[';
+        margin-right: 3px;
+      }
+      &::after {
+        content: ']';
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
 h3 {
   border-bottom: 1px solid lightgrey;
 }
