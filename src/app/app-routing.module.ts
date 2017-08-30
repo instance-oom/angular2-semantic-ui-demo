@@ -5,7 +5,8 @@ import {
   LsuDemoLayoutPage,
   HomePage,
 
-  AccordionDemoPage
+  AccordionDemoPage,
+  CheckBoxDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     [
       { path: '', component: HomePage },
 
-      { path: 'accordion', component: AccordionDemoPage }
+      { path: 'accordion', component: AccordionDemoPage },
+      { path: 'checkbox', component: CheckBoxDemoPage }
     ]
   }
 ];
