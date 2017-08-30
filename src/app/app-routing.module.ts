@@ -3,14 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {
   LsuDemoLayoutPage,
-  HomePage
+  HomePage,
+
+  AccordionDemoPage
 } from './pages';
 
 const routes: Routes = [
   {
     path: '', component: LsuDemoLayoutPage, children:
     [
-      { path: '', component: HomePage }
+      { path: '', component: HomePage },
+
+      { path: 'accordion', component: AccordionDemoPage }
     ]
   }
 ];
