@@ -34,7 +34,7 @@
     Codes
   </h3>
   <lsu-tabset [type]="'secondary'">
-    <lsu-tab [headerText]="'accordion_example.html'">
+    <lsu-tab [headerText]="'accordion.html'">
       <pre lsu-codeblock [language]="'html'">
         <textarea>
 <lsu-accordion [option]="accordOption">
@@ -45,52 +45,51 @@
         </textarea>
       </pre>
     </lsu-tab>
-    <lsu-tab [headerText]="'accordion_example.ts'">
+    <lsu-tab [headerText]="'accordion.page.ts'">
       <pre lsu-codeblock [language]="'typescript'">
         <textarea>
-import << Component >> from '@angular/core';
+import { Component } from '@angular/core';
 
-@Component(<<
+@Component({
   selector: 'accordion-demo',
-  templateUrl: './accordion_example.html'
->>)
+  templateUrl: './accordion.html'
+})
 
-export class AccordionExample <<
+export class AccordionDemoPage {
 
   panels: Array<any>;
   accordOption: any;
 
-  constructor() <<
+  constructor() {
+  }
 
-  >>
-
-  onOnInit() <<
-    this.accordOption = <<
+  ngOnInit() {
+    this.accordOption = {
       "styled": true,
       "fluid": true,
       "inverted": false,
       "allowMultiple": false
-    >>;
+    };
+
     this.panels = [
-      <<
+      {
         title: 'What is a dog?',
         content: `A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
                   it can be found as a welcome guest in many households across the world.`,
         active: false
-      >>, <<
+      }, {
         title: 'What kinds of dogs are there?',
         content: `There are many breeds of dogs. Each breed varies in size and temperament.
-                  Owners often select a breed of dog that they find to be compatible with their own
-                  lifestyle and desires from a companion.`,
+                  Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.`,
         active: true
-      >>, <<
+      }, {
         title: 'How do you acquire a dog?',
-        content: `Three common ways for a prospective owner to acquire a dog is from pet shops,
-                  private owners, or shelters.`,
+        content: 'Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.',
         active: false
-      >>];
-  >>
->>
+      }
+    ];
+  }
+}
         </textarea>
       </pre>
     </lsu-tab>

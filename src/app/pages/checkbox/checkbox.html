@@ -26,7 +26,7 @@
     Codes
   </h3>
   <lsu-tabset [type]="'secondary'">
-    <lsu-tab [headerText]="'checkbox_example.html'">
+    <lsu-tab [headerText]="'checkbox.html'">
       <pre lsu-codeblock [language]="'html'">
         <textarea>
 <lsu-checkbox [(ngModel)]="isChecked" [disabled]="true" [label]="'Check Box(Disabled)'" [type]="'checkbox'"></lsu-checkbox>
@@ -36,28 +36,33 @@
         </textarea>
       </pre>
     </lsu-tab>
-    <lsu-tab [headerText]="'checkbox_example.ts'">
+    <lsu-tab [headerText]="'checkbox.page.ts'">
       <pre lsu-codeblock [language]="'typescript'">
         <textarea>
-import << Component >> from '@angular/core';
+import { Component } from '@angular/core';
 
-@Component(<<
+@Component({
   selector: 'checkbox-demo',
   templateUrl: './checkbox.html'
->>)
+})
 
-export class CheckBoxDemo <<
+export class CheckBoxDemoPage {
 
-  isChecked: boolean = true;
+  isChecked = true;
+  isChecked1 = true;
+  isChecked2 = true;
+  isChecked3 = true;
 
-  constructor() <<
+  constructor() {
 
-  >>
+  }
 
-  ngOnInit() <<
+  ngOnInit() {
     this.isChecked = false;
-  >>
->>
+    this.isChecked2 = true;
+  }
+}
+
         </textarea>
       </pre>
     </lsu-tab>
