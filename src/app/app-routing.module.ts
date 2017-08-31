@@ -6,7 +6,8 @@ import {
   HomePage,
 
   AccordionDemoPage,
-  CheckBoxDemoPage
+  CheckBoxDemoPage,
+  DimmerDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: '', component: HomePage },
 
       { path: 'accordion', component: AccordionDemoPage },
-      { path: 'checkbox', component: CheckBoxDemoPage }
+      { path: 'checkbox', component: CheckBoxDemoPage },
+      { path: 'dimmer', component: DimmerDemoPage }
     ]
   }
 ];
