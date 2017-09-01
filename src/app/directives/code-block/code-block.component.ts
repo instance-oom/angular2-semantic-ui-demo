@@ -14,12 +14,8 @@ export class CodeBlockDirective {
   }
 
   ngAfterViewInit() {
-    let content = this.ele.textContent.replace(/\(\<\(/g, "{{");
+    let content = this.ele.textContent;
     this.ele.textContent = '';
-    content = content.replace(/\(\<\(/g, "{{");
-    content = content.replace(/\)\>\)/g, "}}");
-    content = content.replace(/\<\</g, "{");
-    content = content.replace(/\>\>/g, "}");
     content = content.trimLeft();
     content = content.trimRight();
 
