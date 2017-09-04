@@ -10,7 +10,8 @@ import {
   DimmerDemoPage,
   DropdownDemoPage,
   LoaderDemoPage,
-  ModalDemoPage
+  ModalDemoPage,
+  PaginatinDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: 'dimmer', component: DimmerDemoPage },
       { path: 'dropdown', component: DropdownDemoPage },
       { path: 'loader', component: LoaderDemoPage },
-      { path: 'modal', component: ModalDemoPage }
+      { path: 'modal', component: ModalDemoPage },
+      { path: 'pagination', component: PaginatinDemoPage }
     ]
   }
 ];
