@@ -11,7 +11,8 @@ import {
   DropdownDemoPage,
   LoaderDemoPage,
   ModalDemoPage,
-  PaginatinDemoPage
+  PaginatinDemoPage,
+  PopupDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'dropdown', component: DropdownDemoPage },
       { path: 'loader', component: LoaderDemoPage },
       { path: 'modal', component: ModalDemoPage },
-      { path: 'pagination', component: PaginatinDemoPage }
+      { path: 'pagination', component: PaginatinDemoPage },
+      { path: 'popup', component: PopupDemoPage }
     ]
   }
 ];
