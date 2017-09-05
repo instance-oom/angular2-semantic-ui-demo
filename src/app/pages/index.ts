@@ -8,6 +8,7 @@ import { DropdownDemoPage } from './dropdown/dropdown.page';
 import { LoaderDemoPage } from './loader/loader.page';
 import { ModalDemoPage } from './modal/modal.page';
 import { PaginatinDemoPage } from './pagination/pagination.page';
+import { PopupDemoPage } from './popup/popup.page';
 
 export * from './_layout/layout.page';
 export * from './home/home.page';
@@ -18,6 +19,7 @@ export * from './dropdown/dropdown.page';
 export * from './loader/loader.page';
 export * from './modal/modal.page';
 export * from './pagination/pagination.page';
+export * from './popup/popup.page';
 
 export const PAGES: Array<any> = [
   LsuDemoLayoutPage,
@@ -29,5 +31,6 @@ export const PAGES: Array<any> = [
   DropdownDemoPage,
   LoaderDemoPage,
   ModalDemoPage,
-  PaginatinDemoPage
+  PaginatinDemoPage,
+  PopupDemoPage
 ]
