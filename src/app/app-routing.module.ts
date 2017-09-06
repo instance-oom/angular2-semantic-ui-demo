@@ -12,7 +12,8 @@ import {
   LoaderDemoPage,
   ModalDemoPage,
   PaginatinDemoPage,
-  PopupDemoPage
+  PopupDemoPage,
+  ProgressDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: 'loader', component: LoaderDemoPage },
       { path: 'modal', component: ModalDemoPage },
       { path: 'pagination', component: PaginatinDemoPage },
-      { path: 'popup', component: PopupDemoPage }
+      { path: 'popup', component: PopupDemoPage },
+      { path: 'progress', component: ProgressDemoPage }
     ]
   }
 ];

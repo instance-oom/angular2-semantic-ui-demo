@@ -9,6 +9,7 @@ import { LoaderDemoPage } from './loader/loader.page';
 import { ModalDemoPage } from './modal/modal.page';
 import { PaginatinDemoPage } from './pagination/pagination.page';
 import { PopupDemoPage } from './popup/popup.page';
+import { ProgressDemoPage } from './progress/progress.page';
 
 export * from './_layout/layout.page';
 export * from './home/home.page';
@@ -20,6 +21,7 @@ export * from './loader/loader.page';
 export * from './modal/modal.page';
 export * from './pagination/pagination.page';
 export * from './popup/popup.page';
+export * from './progress/progress.page';
 
 export const PAGES: Array<any> = [
   LsuDemoLayoutPage,
@@ -32,5 +34,6 @@ export const PAGES: Array<any> = [
   LoaderDemoPage,
   ModalDemoPage,
   PaginatinDemoPage,
-  PopupDemoPage
+  PopupDemoPage,
+  ProgressDemoPage
 ]
