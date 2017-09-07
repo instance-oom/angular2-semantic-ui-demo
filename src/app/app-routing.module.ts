@@ -13,7 +13,8 @@ import {
   ModalDemoPage,
   PaginatinDemoPage,
   PopupDemoPage,
-  ProgressDemoPage
+  ProgressDemoPage,
+  RatingDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
       { path: 'modal', component: ModalDemoPage },
       { path: 'pagination', component: PaginatinDemoPage },
       { path: 'popup', component: PopupDemoPage },
-      { path: 'progress', component: ProgressDemoPage }
+      { path: 'progress', component: ProgressDemoPage },
+      { path: 'rating', component: RatingDemoPage }
     ]
   }
 ];
