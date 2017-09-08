@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'rating-example',
-  template: require('./rating.html')
+  selector: 'rating-demo',
+  templateUrl: './rating.html'
 })
-
 export class RatingDemoPage {
-  private rating: number = 3;
 
-  private type: string = 'star';
-  private size: string = "default";
+  rating: number = 3;
 
-  private sizes: Array<string> = [];
-  private maxRating: string = '10';
+  type: string = 'star';
+  size: string = "default";
+
+  sizes: Array<string> = [];
+  maxRating: string = '10';
+
   constructor() {
   }
 

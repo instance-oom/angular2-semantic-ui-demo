@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'checkbox-example',
-  template: require('./checkbox.html')
+  selector: 'checkbox-demo',
+  templateUrl: './checkbox.html'
 })
 
 export class CheckBoxDemoPage {
-  private isChecked: boolean = true;
-  private isChecked1: boolean = true;
-  private isChecked2: boolean = true;
-  private isChecked3: boolean = true;
+
+  isChecked = true;
+  isChecked1 = true;
+  isChecked2 = true;
+  isChecked3 = true;
+
   constructor() {
 
   }

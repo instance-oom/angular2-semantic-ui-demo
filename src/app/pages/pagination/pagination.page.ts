@@ -1,24 +1,28 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'pagination-example',
-  template: require('./pagination.html')
+  selector: 'pagination-demo',
+  templateUrl: './pagination.html'
 })
-
 export class PaginatinDemoPage {
-  private totalCount: number;
-  private pageSize: number = 10;
-  private currentPage: number;
-  private maxSize: number = 10;
-  private pagerDisabled: boolean = false;
-  private pageOptions: any;
 
-  private mockDatas: Array<any> = [];
-  private data: Array<any> = [];
+  totalCount: number;
+  pageSize: number = 10;
+  currentPage: number;
+  maxSize: number = 10;
+  pagerDisabled: boolean = false;
+  pageOptions: any;
 
-  private activeLoader: boolean = false;
+  mockDatas: Array<any> = [];
+  data: Array<any> = [];
+
+  activeLoader: boolean = false;
 
   constructor() {
+
+  }
+
+  ngOnInit() {
     for (let i = 0; i < 87; i++) {
       this.mockDatas.push({
         "ID": i + 1,
@@ -39,9 +43,6 @@ export class PaginatinDemoPage {
       "prevText": "Prev",
       "nextText": "Next"
     }
-  }
-
-  ngOnInit() {
     this.data = this.getData(this.currentPage, this.pageSize);
   }
 
@@ -57,11 +58,10 @@ export class PaginatinDemoPage {
   onSelectPage(pageIndex: number): void {
     this.activeLoader = true;
     this.pagerDisabled = true;
-    var self = this;
-    setTimeout(function () {
-      self.data = self.getData(pageIndex, self.pageSize);
-      self.activeLoader = false;
-      self.pagerDisabled = false;
+    setTimeout(() => {
+      this.data = this.getData(pageIndex, this.pageSize);
+      this.activeLoader = false;
+      this.pagerDisabled = false;
     }, Math.floor(Math.random() * 1500))
   }
 

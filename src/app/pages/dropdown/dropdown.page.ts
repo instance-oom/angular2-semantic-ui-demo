@@ -1,19 +1,24 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'dropdown-example',
-  template: require('./dropdown.html')
+  selector: 'dropdown-demo',
+  templateUrl: './dropdown.html'
 })
 
 export class DropdownDemoPage {
-  private selectedColor: string;
-  private selectedPerson: any;
-  private selectedPersons: Array<any> = [];
-  private colors: Array<string> = [];
-  private persons: Array<any> = [];
-  private fieldForShow: string;
+
+  selectedColor: string;
+  selectedPerson: any;
+  selectedPersons: Array<any> = [];
+  colors: Array<string> = [];
+  persons: Array<any> = [];
+  fieldForShow: string;
 
   constructor() {
+
+  }
+
+  ngOnInit() {
     this.colors = ["Green", "Red", "Blue", "Yellow", "Black"];
     this.persons = [
       {
@@ -31,9 +36,6 @@ export class DropdownDemoPage {
       }
     ]
     this.fieldForShow = "name";
-  }
-
-  ngOnInit() {
     this.selectedPersons.push(this.persons[1]);
   }
 }

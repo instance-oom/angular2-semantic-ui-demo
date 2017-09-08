@@ -5,30 +5,31 @@
   </div>
 </h1>
 
-<h3 class="ui dividing header">
-  Design
-</h3>
-
-<div class="ui segment" style="margin: 10px 0; width:100%;">
-  <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png" alt=""><br>
-  <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png" alt="">  
-  <lsu-dimmer [active]="activeDimmer">
-    <h2>I'm Dimmer</h2>
-  </lsu-dimmer>
+<div class="m-t-md">
+  <h3 class="ui dividing header">
+    Design
+  </h3>
+  <div class="ui segment" style="margin: 10px 0; width:100%;">
+    <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png" alt=""><br>
+    <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png" alt="">
+    <lsu-dimmer [active]="activeDimmer">
+      <h2>I'm Dimmer</h2>
+    </lsu-dimmer>
+  </div>
 </div>
 
-<h3 class="ui dividing header">
-  Operate
-</h3>
-<div class="ui button" (click)="toggle()">{{ activeDimmer ? 'Hidden':'Show' }} Dimmer</div>
-
-<h3 class="ui dividing header">
-  Codes
-</h3>
-<lsu-tabset [type]="'secondary'">
-  <lsu-tab [headerText]="'dimmer_example.html'">
-    <pre><code lsu-codeblock [language]="'html'">
-<textarea>
+<div class="m-t-md">
+  <h3 class="ui dividing header">
+    Operate
+  </h3>
+  <div class="ui button" (click)="toggle()">{{ activeDimmer ? 'Hidden':'Show' }} Dimmer</div>
+  <h3 class="ui dividing header">
+    Codes
+  </h3>
+  <lsu-tabset [type]="'secondary'">
+    <lsu-tab [headerText]="'dimmer.html'">
+      <pre lsu-codeblock [language]="'html'">
+        <textarea>
 <div class="ui segment" style="margin: 10px 0; width:100%;">
   <!-- your page content -->
   <lsu-dimmer [active]="activeDimmer">
@@ -37,33 +38,36 @@
   </lsu-dimmer>
 </div>
 <div class="ui button" (click)="toggle()">{{ activeDimmer ? 'Hidden':'Show' }} Dimmer</div>
-</textarea></code>
-</pre>
-  </lsu-tab>
-  <lsu-tab [headerText]="'dimmer_example.ts'">
-<pre><code lsu-codeblock [language]="'typescript'">
-  <textarea>
-import << Component >> from '@angular/core';
+        </textarea>
+      </pre>
+    </lsu-tab>
+    <lsu-tab [headerText]="'dimmer.page.ts'">
+      <pre lsu-codeblock [language]="'typescript'">
+        <textarea>
+import { Component } from '@angular/core';
 
-@Component(<<
-  selector: 'dimmer-example',
-  templateUrl: './dimmer_example.html'
->>)
+@Component({
+  selector: 'dimmer-demo',
+  templateUrl: './dimmer.html'
+})
 
-export class DimmerExample <<
-  private activeDimmer: boolean;
-  constructor() <<
-  >>
+export class DimmerDemoPage {
 
-  ngOnInit() <<
+  activeDimmer: boolean;
+
+  constructor() {
+  }
+
+  ngOnInit() {
     this.activeDimmer = true;
-  >>
+  }
 
-  toggle(): void <<
+  toggle(): void {
     this.activeDimmer = !this.activeDimmer;
-  >>
->>
-  </textarea>
-</code></pre>
-  </lsu-tab>
-</lsu-tabset>
+  }
+}
+        </textarea>
+      </pre>
+    </lsu-tab>
+  </lsu-tabset>
+</div>

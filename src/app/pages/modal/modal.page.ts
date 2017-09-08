@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'modal-example',
-  template: require('./modal.html')
+  selector: 'modal-demo',
+  templateUrl: './modal.html'
 })
-
 export class ModalDemoPage {
-  private modalOptions: any;
-  private showModal: boolean;
+
+  modalOptions: any;
+  showModal: boolean;
+
   constructor() {
 
   }

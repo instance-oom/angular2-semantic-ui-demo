@@ -1,29 +1,31 @@
-import { enableProdMode, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+
 import { L_SEMANTIC_UI_MODULE } from 'angular2-semantic-ui';
 
-import { LSUDemo } from './app';
+import { DIRECTIVES } from './directives';
 import { PAGES } from './pages';
-import { COMPONENTS } from './components';
-import { AppRouts } from './app.routes';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    LSUDemo,
-    ...COMPONENTS,
+    ...DIRECTIVES,
     ...PAGES,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     L_SEMANTIC_UI_MODULE,
-    RouterModule.forRoot(AppRouts, { useHash: true })
+    AppRoutingModule
   ],
-  providers: [
-  ],
-  bootstrap: [LSUDemo]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

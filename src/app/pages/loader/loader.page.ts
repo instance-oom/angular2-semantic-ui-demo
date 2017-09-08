@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'loader-example',
-  template: require('./loader.html')
+  selector: 'loader-demo',
+  templateUrl: './loader.html'
 })
-
 export class LoaderDemoPage {
-  private activeLoader: boolean;
-  private loaderSize: string = "medium";
-  private loaderText: string;
+
+  activeLoader: boolean;
+  loaderSize: string = "medium";
+  loaderText: string;
+
   constructor() {
   }
 

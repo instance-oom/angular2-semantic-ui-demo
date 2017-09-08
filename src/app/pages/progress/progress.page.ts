@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'progress-example',
-  template: require('./progress.html')
+  selector: 'progress-demo',
+  templateUrl: './progress.html'
 })
-
 export class ProgressDemoPage {
 
-  private label: string = "Uploading...";
-  private text: string;
-  private color: string = "teal";
-  private size: string = "standard";
-  private percent: number = 0;
+  label: string = "Uploading...";
+  text: string;
+  color: string = "teal";
+  size: string = "standard";
+  percent: number = 0;
 
-  private timer: any;
+  timer: any;
+
   constructor() {
 
   }
@@ -23,14 +23,13 @@ export class ProgressDemoPage {
   }
 
   animation(): void {
-    var self = this;
-    if (self.timer) {
-      clearInterval(self.timer);
+    if (this.timer) {
+      clearInterval(this.timer);
     }
-    self.timer = setInterval(function () {
-      self.percent += Math.floor(Math.random() * 10 + 10);
-      if (self.percent > 100) {
-        self.percent = 0;
+    this.timer = setInterval(() => {
+      this.percent += Math.floor(Math.random() * 10 + 10);
+      if (this.percent > 100) {
+        this.percent = 0;
       }
     }, 500)
   }

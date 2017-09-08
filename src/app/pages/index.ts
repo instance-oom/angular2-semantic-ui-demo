@@ -1,36 +1,34 @@
-import { LayoutPage } from './layout';
-import { HomePage } from './home';
-import { AccordionDemoPage } from './accordion';
-import { CheckBoxDemoPage } from './checkbox';
-import { DimmerDemoPage } from './dimmer';
-import { DropdownDemoPage } from './dropdown';
-import { LoaderDemoPage } from './loader';
-import { ModalDemoPage } from './modal';
-import { PaginatinDemoPage } from './pagination';
-import { PopupDemoPage } from './popup';
-import { ProgressDemoPage } from './progress';
-import { RatingDemoPage } from './rating';
-import { TabDemoPage } from './tab';
-import { TagsInputDemoPage } from './tags-input';
+import { LsuDemoLayoutPage } from './_layout/layout.page';
+import { HomePage } from './home/home.page';
 
-export * from './layout';
-export * from './home';
-export * from './accordion';
-export * from './checkbox';
-export * from './dimmer';
-export * from './dropdown';
-export * from './loader';
-export * from './modal';
-export * from './pagination';
-export * from './popup';
-export * from './progress';
-export * from './rating';
-export * from './tab';
-export * from './tags-input';
+import { AccordionDemoPage } from './accordion/accordion.page';
+import { CheckBoxDemoPage } from './checkbox/checkbox.page';
+import { DimmerDemoPage } from './dimmer/dimmer.page';
+import { DropdownDemoPage } from './dropdown/dropdown.page';
+import { LoaderDemoPage } from './loader/loader.page';
+import { ModalDemoPage } from './modal/modal.page';
+import { PaginatinDemoPage } from './pagination/pagination.page';
+import { PopupDemoPage } from './popup/popup.page';
+import { ProgressDemoPage } from './progress/progress.page';
+import { RatingDemoPage } from './rating/rating.page';
+
+export * from './_layout/layout.page';
+export * from './home/home.page';
+export * from './accordion/accordion.page';
+export * from './checkbox/checkbox.page';
+export * from './dimmer/dimmer.page';
+export * from './dropdown/dropdown.page';
+export * from './loader/loader.page';
+export * from './modal/modal.page';
+export * from './pagination/pagination.page';
+export * from './popup/popup.page';
+export * from './progress/progress.page';
+export * from './rating/rating.page';
 
 export const PAGES: Array<any> = [
-  LayoutPage,
+  LsuDemoLayoutPage,
   HomePage,
+
   AccordionDemoPage,
   CheckBoxDemoPage,
   DimmerDemoPage,
@@ -40,7 +38,5 @@ export const PAGES: Array<any> = [
   PaginatinDemoPage,
   PopupDemoPage,
   ProgressDemoPage,
-  RatingDemoPage,
-  TabDemoPage,
-  TagsInputDemoPage
-];
+  RatingDemoPage
+]

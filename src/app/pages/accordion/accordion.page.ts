@@ -2,20 +2,24 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'accordion-demo',
-  template: require('./accordion.html')
+  templateUrl: './accordion.html'
 })
 
 export class AccordionDemoPage {
 
-  private panels: Array<any>;
-  private accordOption: any;
+  panels: Array<any>;
+  accordOption: any;
+
   constructor() {
+  }
+
+  ngOnInit() {
     this.accordOption = {
       "styled": true,
       "fluid": true,
       "inverted": false,
       "allowMultiple": false
-    }
+    };
 
     this.panels = [
       {
@@ -30,6 +34,7 @@ export class AccordionDemoPage {
         title: 'How do you acquire a dog?',
         content: 'Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.',
         active: false
-      }]
+      }
+    ];
   }
 }

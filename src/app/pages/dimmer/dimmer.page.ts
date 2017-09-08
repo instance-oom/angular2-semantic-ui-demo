@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'dimmer-example',
-  template: require('./dimmer.html')
+  selector: 'dimmer-demo',
+  templateUrl: './dimmer.html'
 })
 
 export class DimmerDemoPage {
-  private activeDimmer: boolean;
+
+  activeDimmer: boolean;
+
   constructor() {
   }
 

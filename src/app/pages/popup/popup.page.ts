@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'popup-example',
-  template: require('./popup.html')
+  selector: 'popup-demo',
+  templateUrl: './popup.html'
 })
-
 export class PopupDemoPage {
+
   constructor() {
   }
 
