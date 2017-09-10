@@ -12,6 +12,7 @@ import { PopupDemoPage } from './popup/popup.page';
 import { ProgressDemoPage } from './progress/progress.page';
 import { RatingDemoPage } from './rating/rating.page';
 import { TabDemoPage } from './tab/tab.page';
+import { TagsInputDemoPage } from './tags-input/tags-input.page';
 
 export * from './_layout/layout.page';
 export * from './home/home.page';
@@ -26,6 +27,7 @@ export * from './popup/popup.page';
 export * from './progress/progress.page';
 export * from './rating/rating.page';
 export * from './tab/tab.page';
+export * from './tags-input/tags-input.page';
 
 export const PAGES: Array<any> = [
   LsuDemoLayoutPage,
@@ -41,5 +43,6 @@ export const PAGES: Array<any> = [
   PopupDemoPage,
   ProgressDemoPage,
   RatingDemoPage,
-  TabDemoPage
+  TabDemoPage,
+  TagsInputDemoPage
 ]

@@ -15,7 +15,8 @@ import {
   PopupDemoPage,
   ProgressDemoPage,
   RatingDemoPage,
-  TabDemoPage
+  TabDemoPage,
+  TagsInputDemoPage
 } from './pages';
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
       { path: 'popup', component: PopupDemoPage },
       { path: 'progress', component: ProgressDemoPage },
       { path: 'rating', component: RatingDemoPage },
-      { path: 'tab', component: TabDemoPage }
+      { path: 'tab', component: TabDemoPage },
+      { path: 'tags-input', component: TagsInputDemoPage }
     ]
   }
 ];
